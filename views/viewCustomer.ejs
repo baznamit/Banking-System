@@ -1,0 +1,30 @@
+<%- include("partials/header") -%>
+
+<div class="info">
+    <div class="box" id="heading">
+        <h1> <%= listTitle %> </h1>
+    </div>
+    
+    <div class="box">
+        <table>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Balance</th>
+            </tr>
+            <% newListItems.forEach ((item) => { %>
+            <div class="item">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><%=  item.name  %></td>
+                    <td>$<%=  item.balance  %></td>
+                </tr>
+            </div>
+            <% }) %>
+        </table>
+        <br>
+        <p><span>Select a customer</span></p>
+    </div>
+</div>
+
+<%- include("partials/footer") -%>
