@@ -67,6 +67,13 @@ app.get("/customers", (req, res) => {
   })
 })
 
+app.post("/firstCustomer", (req, res) => {
+  const cust1Name =  req.body.checkbox
+  title = "Hi, " + cust1Name + "!"
+  
+  res.render("firstCustomer", {listTitle: title})
+})
+
 app.listen(3000, function() {
     console.log("Server started on port 3000");
 });

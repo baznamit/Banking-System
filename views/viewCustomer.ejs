@@ -13,13 +13,16 @@
                 <th>Balance</th>
             </tr>
             <% newListItems.forEach ((item) => { %>
-            <div class="item">
-                <tr>
-                    <td><input type="checkbox"></td>
-                    <td><%=  item.name  %></td>
-                    <td>$<%=  item.balance  %></td>
-                </tr>
-            </div>
+            <form action="/firstCustomer" method="post">
+                <div class="item">
+                    <tr>
+                        <td><input type="checkbox" name="checkbox" value="<%=item.name%>" onChange="this.form.submit()"></td>
+                        <td><%=  item.name  %></td>
+                        <td>$<%=  item.balance  %></td>
+                    </tr>
+                </div>
+            </form>
+            
             <% }) %>
         </table>
         <br>
