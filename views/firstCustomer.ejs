@@ -2,11 +2,21 @@
 
 <div class="info">
     <div class="box" id="heading">
-        <h1> <%= listTitle %> </h1>
+        <h1>Hi, <%= listTitle %>! </h1>
+        <% custInfo.forEach ((item) => { %>
+        <h2> Balance: ₹ <%= item.balance %> </h2>
+        <% }) %>
     </div>
 
     <div class="box">
-        <p></p>
+        <form action="/paymentSuccess" method="post">
+            <input type="hidden" name="cust1" value="<%= listTitle %>">
+            <label for="fname"><b>Enter name of person you want to send to</b></label><br><br>
+            <input type="text" name="cust2"><br><br><br>
+            <label for="fname"><b>Enter amount to pay</b></label><br><br>
+            <input type="text" name="amount"><br><br>
+            <button type="submit" id="submitForm" class="btn btn-outline-success btn-submit">Submit</button> 
+        </form>
     </div>
 </div>
 

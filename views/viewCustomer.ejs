@@ -3,22 +3,22 @@
 <div class="info">
     <div class="box" id="heading">
         <h1> <%= listTitle %> </h1>
-    </div>
+</div>
     
     <div class="box">
-        <table>
-            <tr>
+        <table class="table table-hover table-bordered">
+            <tr class="table-danger">
                 <th></th>
                 <th>Name</th>
                 <th>Balance</th>
             </tr>
-            <% newListItems.forEach ((item) => { %>
+            <% customerData.forEach((item) => { %>
             <form action="/firstCustomer" method="post">
                 <div class="item">
                     <tr>
                         <td><input type="checkbox" name="checkbox" value="<%=item.name%>" onChange="this.form.submit()"></td>
                         <td><%=  item.name  %></td>
-                        <td>$<%=  item.balance  %></td>
+                        <td>₹ <%=  item.balance  %></td>
                     </tr>
                 </div>
             </form>
@@ -26,7 +26,7 @@
             <% }) %>
         </table>
         <br>
-        <p><span>Select a customer</span></p>
+        <p><b>Select a customer</b></p>
     </div>
 </div>
 

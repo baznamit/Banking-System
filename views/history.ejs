@@ -1,0 +1,27 @@
+<%- include("partials/header") -%>
+
+<div class="info">
+    <div class="box" id="heading">
+        <h1> <%= listTitle %> </h1>
+</div>
+
+<div class="box">
+    <table class="table table-hover table-bordered">
+        <tr class="table-danger">
+            <th>Sender</th>
+            <th>Receiver</th>
+            <th>Amount Tranferred</th>
+        </tr>
+        <% history.forEach((item) => { %>
+        <div class="item">
+            <tr>
+                <td><%=  item.sender  %></td>
+                <td><%=  item.receiver  %></td>
+                <td>₹ <%=  item.amount  %></td>
+            </tr>
+        </div>
+        <% }) %>
+    </table>
+</div>
+
+<%- include("partials/footer") -%>

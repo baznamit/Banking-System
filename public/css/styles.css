@@ -1,16 +1,22 @@
 html {
-    background-color: #E4D1B9;
+    background-color: #FDFFA9;
     font-family: 'helvetica neue';
+}
+
+hr {
+    margin: 2px
 }
 
 .info {
     position: absolute;
     top:100px;
-    left:41%;
-    background-color: #E4D1B9;
+    left:35%;
+    right:35%;
+    background-color: #FDFFA9;
+    font-family: 'Anek Tamil', sans-serif;
 }
 .box {
-    padding: 10px 10px;
+    padding: 10% 10px;
     /* max-width: 400px; */
     margin: 50px auto;
     background: white;
@@ -20,46 +26,62 @@ html {
 }
 
 #heading {
-    background-color: #A683E3;
+    background-color: #FEB139;
     text-align: center;
     padding: 15px 15px 15px 15px;
 }
 
 .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 4px;
-    background-color: #8FBDD3
+    background-color: #00C897;
 }
 
-#buttons {
-    margin:-100px;
+.btn-submit {
+    border-Radius: 40%;
 }
 
 table, th, td {
-    border:1px solid black;
+    /* border:1px solid black; */
     padding: 15px 50px 15px;
 }
 
 table {
-    margin: auto;
-    
+    margin: auto; 
 }
 
-.btn {
-    position: relative;
-    left: 40%;
-    top: 450px;
+#button {
+    /* text-align: center; */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.homebutton {
+    font-family: 'Anek Tamil', sans-serif;
+    position: absolute;
+    right: 40%;
+    top: 350px;
     height: 100px;
-    width: 400px;
+    width: 20%;
     border: 3px solid;
     border-radius: 16px;
+    background-color: #8BDB81;
+}
+.homebutton:hover {
+        text-decoration:none;
+        background:#000;
 }
 
+.payment-success-box {
+    position: relative;
+    top: 150px;
+    /* left: 45%; */
+}
 
 .footer-padding {
 	padding-bottom: 60px;
@@ -71,7 +93,7 @@ table {
 	bottom: 0;
 	width: 100%;
 	height: 60px;
-	background-color: #1abc9c;
+	background-color: #019267;
 }
 
 .footer p {
